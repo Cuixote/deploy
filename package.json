@@ -1,0 +1,15 @@
+{
+  "name": "@mark42/deploy",
+  "version": "1.0.7",
+  "description": "fe deploy flow",
+  "main": "lib/index.js",
+  "bin": {
+    "deploy": "bin/deploy.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "author": "Cuixote <309579250@qq.com> (https://jiahesheng.vip)",
+  "license": "MIT"
+}
