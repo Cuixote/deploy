@@ -1,6 +1,5 @@
 import execa from 'execa'
 import fse from 'fs-extra'
-import path from 'path'
 
 export async function execOut (...args) {
   const { stdout, stderr, failed } = await execa(...args)

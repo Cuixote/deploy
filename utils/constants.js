@@ -7,5 +7,7 @@ export const ENV_MAP = new Map([
 
 export const CURRENT_PROJECT = {
   packageJson: null,
-  gitBranchName: null
+  gitBranchName: null,
+  env: null,
+  remoteDomain: 'https://imgvideo.120yibao.com'
 }
