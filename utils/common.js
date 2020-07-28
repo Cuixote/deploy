@@ -39,3 +39,13 @@ export function recordTime (key, val) {
 export function getShellString (shellString = '') {
   return shellString.toString().replace(/\n/, '')
 }
+
+/**
+ * 静默输出
+ * @param arg
+ */
+export function silentLog (...arg) {
+  if (!CURRENT_PROJECT.config.silent) {
+    console.log(arg)
+  }
+}

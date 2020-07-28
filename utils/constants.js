@@ -6,10 +6,15 @@ export const ENV_MAP = new Map([
 ])
 
 export const CURRENT_PROJECT = {
-  packageJson: null,
   gitBranchName: null,
   env: null,
-  remoteDomain: 'https://imgvideo.120yibao.com',
+  config: {
+    name: null,
+    uploadDomain: null,
+    uploadBucket: null,
+    buildFileSizeLimit: 100,
+    silent: true
+  },
   times: {
     initStart: 0,
     initEnd: 0,
