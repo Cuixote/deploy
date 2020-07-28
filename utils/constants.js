@@ -1,14 +1,8 @@
-const ENV_MAP = new Map([
-  ['dev', { branch: 'dev' }],
-  ['test', { branch: 'test' }],
-  ['stable', { branch: 'stable' }],
-  ['production', { branch: 'master' }]
-])
+const ENV_LIST = ['dev', 'test', 'stable', 'production']
 
-exports.ENV_MAP = ENV_MAP
+exports.ENV_LIST = ENV_LIST
 
 const CURRENT_PROJECT = {
-  gitBranchName: null,
   env: null,
   config: {
     name: null,
