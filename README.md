@@ -73,7 +73,15 @@ npx deploy [env]
   "uploadDomain": "",
   "uploadBucket": "",
   "buildFileSizeLimit": 100,
-  "slice": true
+  "slice": true,
+  "server": {
+    "dev": [{
+      "account": "admin",
+      "domain": "192.168.1.2",
+      "path": "/data/www/index/",
+      "port": "8080"
+    }]
+  }
 }
 ```
 
@@ -84,5 +92,6 @@ npx deploy [env]
 name | 是 | 项目名称
 uploadDomain | 是 | 上传七牛时对应的域名
 uploadBucket | 是 | 上传七牛时对应的bucket
+server | 是 | 服务器配置，存放`index.html`文件
 buildFileSizeLimit | 否 | 打包后，超过多大体积（KB）的文件进行警告，默认100KB，值类型为number
 silent | 否 | 是否展示流程细节，默认为true，不展示。

@@ -14,6 +14,7 @@ const CURRENT_PROJECT = {
     name: null,
     uploadDomain: null,
     uploadBucket: null,
+    server: null,
     buildFileSizeLimit: 100,
     silent: true
   },
