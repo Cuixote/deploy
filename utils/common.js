@@ -1,13 +1,5 @@
-import execa from 'execa'
 import fse from 'fs-extra'
-
-export async function execOut (...args) {
-  const { stdout, stderr, failed } = await execa(...args)
-  if (failed) {
-    throw new Error(stderr)
-  }
-  return stdout
-}
+import { CURRENT_PROJECT } from './constants.js'
 
 /**
  * 递归遍历目录下所有文件
@@ -26,4 +18,24 @@ export function findAllFiles (dirPath, result = []) {
       findAllFiles(p, result)
     }
   })
+}
+
+/**
+ * 记录时间
+ * @param key
+ * @param val
+ */
+export function recordTime (key, val) {
+  if (CURRENT_PROJECT.times[key] !== undefined) {
+    CURRENT_PROJECT.times[key] = val || Date.now()
+  }
+}
+
+/**
+ * 格式化shelljs的输出结果
+ * @param shellString
+ * @return {string}
+ */
+export function getShellString (shellString = '') {
+  return shellString.toString().replace(/\n/, '')
 }

@@ -1,10 +1,13 @@
 {
   "name": "@mark42/deploy",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "fe deploy flow",
   "main": "lib/index.js",
   "bin": {
     "deploy": "bin/deploy.js"
+  },
+  "scripts": {
+    "deploy": "npm publish"
   },
   "publishConfig": {
     "access": "public"
@@ -21,7 +24,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "execa": "^4.0.3",
     "fs-extra": "^9.0.1",
     "node-fetch": "^2.6.0",
     "shelljs": "^0.8.4"
