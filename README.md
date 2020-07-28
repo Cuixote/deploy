@@ -1,6 +1,6 @@
 ## @mark42/deploy
 
-前端部署系统。
+[前端部署系统](https://www.npmjs.com/package/@mark42/deploy)
 
 ### 介绍
 
@@ -48,6 +48,7 @@ npx deploy [env]
 预发环境 | stable | stable
 正式环境 | production | master
 
+
 ### 推荐配置
 
 ```json
@@ -73,17 +74,6 @@ npx deploy [env]
   "uploadBucket": "",
   "buildFileSizeLimit": 100,
   "slice": true
-}
-```
-
-#### 推荐配置
-
-```json
-{
-  "name": "...",
-  "uploadDomain": "https://static.120yibao.com",
-  "uploadBucket": "yibao-static"
-
 }
 ```
 

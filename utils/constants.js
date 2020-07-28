@@ -1,11 +1,13 @@
-export const ENV_MAP = new Map([
+const ENV_MAP = new Map([
   ['dev', { branch: 'dev' }],
   ['test', { branch: 'test' }],
   ['stable', { branch: 'stable' }],
   ['production', { branch: 'master' }]
 ])
 
-export const CURRENT_PROJECT = {
+exports.ENV_MAP = ENV_MAP
+
+const CURRENT_PROJECT = {
   gitBranchName: null,
   env: null,
   config: {
@@ -30,3 +32,5 @@ export const CURRENT_PROJECT = {
     warmUpEnd: 0
   }
 }
+
+exports.CURRENT_PROJECT = CURRENT_PROJECT
