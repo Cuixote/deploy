@@ -1,6 +1,6 @@
 {
   "name": "@mark42/deploy",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "fe deploy flow",
   "main": "lib/index.js",
   "bin": {
@@ -14,7 +14,7 @@
   },
   "author": "Cuixote <309579250@qq.com> (https://jiahesheng.vip)",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "cli-table3": "^0.6.0",
     "date-format": "^3.0.0",
     "eslint": "^7.5.0",
