@@ -67,7 +67,7 @@ exports.execCommand = execCommand
 function strExecCommand (command, removeLinkBreak) {
   let str = execCommand(command).toString()
   if (removeLinkBreak) {
-    str = str.replace(/\n/g, '')
+    str = str.replace(/\n$/, '')
   }
   return str
 }
