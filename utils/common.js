@@ -41,7 +41,7 @@ exports.recordTime = recordTime
  * @param arg
  */
 function silentLog (...arg) {
-  if (!CURRENT_PROJECT.config.silent) {
+  if (CURRENT_PROJECT.config.verbose) {
     console.log(...arg)
   }
 }
@@ -73,3 +73,15 @@ function strExecCommand (command, removeLinkBreak) {
 }
 
 exports.strExecCommand = strExecCommand
+
+/**
+ * 打印日志并退出
+ * @param info
+ * @param code
+ */
+function exit (info, code = 1) {
+  console.log(info)
+  process.exit(code)
+}
+
+exports.exit = exit

@@ -3,14 +3,15 @@ const ENV_LIST = ['dev', 'test', 'stable', 'production']
 exports.ENV_LIST = ENV_LIST
 
 const CURRENT_PROJECT = {
-  env: null,
   config: {
+    env: null,
     name: null,
     uploadDomain: null,
     uploadBucket: null,
     server: null,
     buildFileSizeLimit: 100,
-    silent: true
+    verbose: false,
+    path: '.deploy.json'
   },
   times: {
     headStart: 0,
