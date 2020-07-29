@@ -1,6 +1,6 @@
 {
   "name": "@lonely9/deploy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "fe deploy flow",
   "main": "lib/index.js",
   "bin": {
@@ -10,7 +10,8 @@
     "deploy": "npm publish"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "author": "Cuixote <309579250@qq.com> (https://jiahesheng.vip)",
   "license": "MIT",
