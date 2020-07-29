@@ -1,6 +1,6 @@
-## @mark42/deploy
+## @lonely9/deploy
 
-[前端部署系统](https://www.npmjs.com/package/@mark42/deploy)
+[前端部署系统](https://www.npmjs.com/package/@lonely9/deploy)
 
 ### 介绍
 

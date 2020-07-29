@@ -13,8 +13,8 @@ const CURRENT_PROJECT = {
     silent: true
   },
   times: {
-    initStart: 0,
-    initEnd: 0,
+    headStart: 0,
+    headEnd: 0,
     installStart: 0,
     installEnd: 0,
     buildStart: 0,

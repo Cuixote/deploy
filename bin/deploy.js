@@ -1,3 +1,7 @@
 #!/usr/bin/env node
 
-require('../lib/index.js')
+const initConfig = require('../lib/config')
+const main = require('../lib/main')
+
+initConfig()
+main()
