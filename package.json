@@ -1,6 +1,6 @@
 {
   "name": "@lonely9/deploy",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "fe deploy flow",
   "main": "lib/index.js",
   "bin": {
@@ -8,6 +8,10 @@
   },
   "scripts": {
     "deploy": "npm publish"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/Cuixote/deploy.git"
   },
   "publishConfig": {
     "access": "public",
