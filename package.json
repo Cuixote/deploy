@@ -1,6 +1,6 @@
 {
   "name": "@lonely9/deploy",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "fe deploy flow",
   "main": "lib/index.js",
   "bin": {
@@ -16,7 +16,6 @@
   "author": "Cuixote <309579250@qq.com> (https://jiahesheng.vip)",
   "license": "MIT",
   "dependencies": {
-    "cli-table3": "^0.6.0",
     "date-format": "^3.0.0",
     "eslint": "^7.5.0",
     "eslint-config-standard": "^14.1.1",
