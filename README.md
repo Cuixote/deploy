@@ -16,7 +16,7 @@
 #### 安装
 
 ```shell script
-npm i -D @mark42/deploy@latest
+npm i -g @mark42/deploy@latest
 ```
 
 #### 使用

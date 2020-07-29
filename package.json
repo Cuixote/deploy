@@ -1,6 +1,6 @@
 {
   "name": "@mark42/deploy",
-  "version": "1.5.4",
+  "version": "1.5.6",
   "description": "fe deploy flow",
   "main": "lib/index.js",
   "bin": {

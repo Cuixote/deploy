@@ -1,4 +1,5 @@
 const fse = require('fs-extra')
+const shell = require('shelljs')
 const { CURRENT_PROJECT } = require('./constants')
 
 /**
@@ -36,17 +37,6 @@ function recordTime (key, val) {
 exports.recordTime = recordTime
 
 /**
- * 格式化shelljs的输出结果
- * @param shellString
- * @return {string}
- */
-function getShellString (shellString = '') {
-  return shellString.toString().replace(/\n/, '')
-}
-
-exports.getShellString = getShellString
-
-/**
  * 静默输出
  * @param arg
  */
@@ -56,3 +46,30 @@ function silentLog (...arg) {
   }
 }
 exports.silentLog = silentLog
+
+/**
+ * 静默输出命令，并执行命令，返回命令输出结果
+ * @param command
+ */
+function execCommand (command) {
+  silentLog(command)
+  return shell.exec(command)
+}
+
+exports.execCommand = execCommand
+
+/**
+ * 格式化shelljs的输出结果
+ * @param command
+ * @param removeLinkBreak 是否同时移除多余的换行符，默认false
+ * @return {string}
+ */
+function strExecCommand (command, removeLinkBreak) {
+  let str = execCommand(command).toString()
+  if (removeLinkBreak) {
+    str = str.replace(/\n/g, '')
+  }
+  return str
+}
+
+exports.strExecCommand = strExecCommand
