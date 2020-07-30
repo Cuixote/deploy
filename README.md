@@ -20,7 +20,7 @@
 npm i @lonely9/deploy@latest -g --registry https://registry.npmjs.org
 ```
 
-全局安装deploy，使用npm官方源地址。其他镜像地址肯恩更新不及时。
+全局安装deploy，使用npm官方源地址。其他镜像地址可能更新不及时。
 
 #### 使用
 
