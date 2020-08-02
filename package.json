@@ -1,10 +1,11 @@
 {
   "name": "@lonely9/deploy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "fe deploy flow",
   "main": "lib/main.js",
   "keywords": [
-    "single page app deploy", "with jenkens and CDN"
+    "single page app deploy",
+    "with jenkens and CDN"
   ],
   "bin": {
     "deploy": "bin/deploy.js"
@@ -45,6 +46,8 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11"
   }
 }
