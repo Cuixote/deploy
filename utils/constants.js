@@ -1,7 +1,38 @@
+/**
+ * 环境列表
+ * @type {string[]}
+ */
 const ENV_LIST = ['dev', 'test', 'stable', 'production']
 
 exports.ENV_LIST = ENV_LIST
 
+/**
+ * npm源地址
+ * @type {{OFFICIAL: string, TaoBao: string}}
+ */
+const REGISTRY = {
+  OFFICIAL: 'https://registry.npmjs.org',
+  TaoBao: 'https://registry.npm.taobao.org'
+}
+
+exports.REGISTRY = REGISTRY
+
+/**
+ * 当前项目的环境变量
+ * @type {
+ *  {
+ *    times: {
+ *      installStart: number, uploadStart: number, uploadEnd: number, warmUpEnd: number, assortEnd: number,
+ *      buildEnd: number, assortStart: number, warmUpStart: number, buildStart: number, installEnd: number,
+ *      headEnd: number, headStart: number
+ *     },
+ *     config: {
+ *      server: null, path: string, registry: string, uploadDomain: null, buildFileSizeLimit: number,
+ *      name: null, env: null, uploadBucket: null, verbose: boolean
+ *     }
+ *  }
+ * }
+ */
 const CURRENT_PROJECT = {
   config: {
     env: null,
@@ -11,7 +42,8 @@ const CURRENT_PROJECT = {
     server: null,
     buildFileSizeLimit: 100,
     verbose: false,
-    path: '.deploy.json'
+    path: '.deploy.json',
+    registry: REGISTRY.TaoBao
   },
   times: {
     headStart: 0,

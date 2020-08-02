@@ -1,8 +1,11 @@
 {
   "name": "@lonely9/deploy",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "fe deploy flow",
-  "main": "lib/index.js",
+  "main": "lib/main.js",
+  "keywords": [
+    "single page app deploy", "with jenkens and CDN"
+  ],
   "bin": {
     "deploy": "bin/deploy.js"
   },
@@ -19,6 +22,16 @@
   },
   "author": "Cuixote <309579250@qq.com> (https://jiahesheng.vip)",
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
+  },
   "dependencies": {
     "date-format": "^3.0.0",
     "fs-extra": "^9.0.1",

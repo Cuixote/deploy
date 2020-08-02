@@ -41,6 +41,21 @@ deploy [env]
 预发环境 | stable
 正式环境 | production
 
+#### 打包
+
+打包其实是执行了`npm scripts` 里对应的四个命令，这四个命令对应四个环境，所以这四个命令一定得先在`npm scripts` 里面配置好。
+
+```json
+{
+  "scripts": {
+    "build:dev": "",
+    "build:test": "",
+    "build:stable": "",
+    "build:production": ""
+  }
+}
+```
+
 更多信息，可在命令行执行：
 
 ```shell script
@@ -82,3 +97,12 @@ server | 是 | 服务器配置，格式见示例。
 buildFileSizeLimit | 否 | 打包后，超过多大体积（KB）的文件进行警告，默认100KB，值类型为number
 verbose | 否 | 是否展示流程细节，默认为false，不展示。
 path | 否 | 设置配置文件路径。默认值为'.deploy.json'。
+registry | 否 | 设置npm包安装源地址。默认值为'https://registry.npm.taobao.org'
+
+也可以在命令行中执行：
+
+```shell
+deploy help
+```
+
+获取这些参数信息
