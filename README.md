@@ -98,6 +98,7 @@ buildFileSizeLimit | 否 | 打包后，超过多大体积（KB）的文件进行
 verbose | 否 | 是否展示流程细节，默认为false，不展示。
 path | 否 | 设置配置文件路径。默认值为'.deploy.json'。
 registry | 否 | 设置npm包安装源地址。默认值为'https://registry.npm.taobao.org'
+skipWarmUp / 否 | 设置是否跳过预热流程，默认为false，不跳过。
 
 也可以在命令行中执行：
 
@@ -106,3 +107,8 @@ deploy help
 ```
 
 获取这些参数信息
+
+### 特殊说明
+
+- 默认只有test/production环境会生成sourcemap。可以在业务项目中的`vue.config.js`配置。
+本项目只有检测到`dist/static/js`文件夹中有`.map`文件才会进行相应操作。

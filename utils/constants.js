@@ -43,7 +43,8 @@ const CURRENT_PROJECT = {
     buildFileSizeLimit: 100,
     verbose: false,
     path: '.deploy.json',
-    registry: REGISTRY.TaoBao
+    registry: REGISTRY.TaoBao,
+    skipWarmUp: false
   },
   times: {
     headStart: 0,
