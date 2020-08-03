@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>warm-up with allSettled</title>
+</head>
+<body>
+<script>
+  let url1 = 'https://jsonplaceholder.typicode.com/todos/1'
+  let url2 = 'https://jsonplaceholder.typicode.com/todos/a'
+  let url3 = 'https://d.typicode.com/todos/a'
+  Promise.allSettled([fetch(url1), fetch(url2), fetch(url3)]).then(res => {
+    console.log(res)
+  }).catch(err => {
+    console.log('err', err)
+  })
+</script>
+</body>
+</html>
