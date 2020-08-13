@@ -1,6 +1,6 @@
 {
   "name": "@lonely9/deploy",
-  "version": "0.2.7",
+  "version": "0.3.7",
   "description": "fe deploy flow",
   "main": "lib/main.js",
   "keywords": [

@@ -19,19 +19,6 @@ exports.REGISTRY = REGISTRY
 
 /**
  * 当前项目的环境变量
- * @type {
- *  {
- *    times: {
- *      installStart: number, uploadStart: number, uploadEnd: number, warmUpEnd: number, assortEnd: number,
- *      buildEnd: number, assortStart: number, warmUpStart: number, buildStart: number, installEnd: number,
- *      headEnd: number, headStart: number
- *     },
- *     config: {
- *      server: null, path: string, registry: string, uploadDomain: null, buildFileSizeLimit: number,
- *      name: null, env: null, uploadBucket: null, verbose: boolean
- *     }
- *  }
- * }
  */
 const CURRENT_PROJECT = {
   config: {
@@ -44,7 +31,8 @@ const CURRENT_PROJECT = {
     verbose: false,
     path: '.deploy.json',
     registry: REGISTRY.TaoBao,
-    skipWarmUp: false
+    skipWarmUp: false,
+    backup: false
   },
   times: {
     headStart: 0,

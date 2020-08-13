@@ -1,6 +1,6 @@
 ## @lonely9/deploy
 
-[前端部署系统](https://www.npmjs.com/package/@lonely9/deploy)
+[前端部署系统](https://www.npmjs.com/package/@lonely9/deploy)       [知识点小记](https://www.yuque.com/jiahesheng/blog/pv3bwt)
 
 ### 介绍
 
