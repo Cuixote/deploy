@@ -62,6 +62,25 @@ deploy [env]
 deploy help
 ```
 
+#### 回滚
+
+支持简单回滚：只能回滚到上上次（相对于本次发布）成功发布的版本，此过程不可逆。
+
+```bash
+deploy [dev] --backup
+```
+
+例如：
+
+1. 我发布了测试环境版本【index.html - 1.0.0】，此时会在发布机本地存储一个备份【index.html - 1.0.0】。 `deploy test`
+2. 我又发布了测试环境版本【index.html - 2.0.0】，此时本地有两个备份【index.html - 1.0.0】、【index.html - 2.0.0】。`deploy test`
+3. 我发现【index.html - 2.0.0】有重大错误，需要回滚到版本【index.html - 1.0.0】。`deploy test --backup`
+4. 回滚成功，我又回到了步骤1的状态。
+
+> 在步骤1时，不能回滚，因为该功能是回滚到上上次发布成功的版本，而本地没有这个备份。
+> 步骤4时，本地存储文件只有一个【index.html - 1.0.0】。即此时无论服务器，还是本地状态都与步骤1时一模一样。所以，此过程不可逆——无法回到步骤2的状态。
+
+
 ### 配置文件
 
 > 优先级。命令行参数 > 配置文件 > 默认值
@@ -99,6 +118,7 @@ verbose | 否 | 是否展示流程细节，默认为false，不展示。
 path | 否 | 设置配置文件路径。默认值为'.deploy.json'。
 registry | 否 | 设置npm包安装源地址。默认值为'https://registry.npm.taobao.org'
 skipWarmUp | 否 | 设置是否跳过预热流程，默认为false，不跳过。
+backup | 否 | 设置是否回滚到上个版本，默认为false，不跳过。
 
 也可以在命令行中执行：
 
