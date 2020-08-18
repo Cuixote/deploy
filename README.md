@@ -1,8 +1,13 @@
-## @lonely9/deploy
+# @lonely9/deploy
 
-[前端部署系统](https://www.npmjs.com/package/@lonely9/deploy)       [知识点小记](https://www.yuque.com/jiahesheng/blog/pv3bwt)
+[前端部署系统](https://www.npmjs.com/package/@lonely9/deploy)
+[知识点小记](https://www.yuque.com/jiahesheng/blog/tb1ya9)
 
-### 介绍
+## 停止更新声明
+
+本项目将在0.4.4版本之后停止外网更新，转为公司内部项目。
+
+## 介绍
 
 包含6个流程：
 - 初始化。包含参数校验，本次程序运行参数，全局变量初始化等
@@ -12,9 +17,9 @@
 - 上传。将打包好的静态资源文件及`map`文件上传到七牛CDN。将index.html发送到指定服务器。
 - 预热。对CDN上的静态资源进行请求。
 
-### 使用
+## 使用
 
-#### 安装
+### 安装
 
 ```shell script
 npm i @lonely9/deploy@latest -g --registry https://registry.npmjs.org
@@ -22,7 +27,7 @@ npm i @lonely9/deploy@latest -g --registry https://registry.npmjs.org
 
 全局安装deploy，使用npm官方源地址。其他镜像地址可能更新不及时。
 
-#### 使用
+### 使用
 
 进入项目根目录，在命令行执行：
 
@@ -41,7 +46,7 @@ deploy [env]
 预发环境 | stable
 正式环境 | production
 
-#### 打包
+### 打包
 
 打包其实是执行了`npm scripts` 里对应的四个命令，这四个命令对应四个环境，所以这四个命令一定得先在`npm scripts` 里面配置好。
 
@@ -62,7 +67,7 @@ deploy [env]
 deploy help
 ```
 
-#### 回滚
+### 回滚
 
 支持简单回滚：只能回滚到上上次（相对于本次发布）成功发布的版本，此过程不可逆。
 
@@ -81,7 +86,7 @@ deploy [dev] --backup
 > 步骤4时，本地存储文件只有一个【index.html - 1.0.0】。即此时无论服务器，还是本地状态都与步骤1时一模一样。所以，此过程不可逆——无法回到步骤2的状态。
 
 
-### 配置文件
+## 配置文件
 
 > 优先级。命令行参数 > 配置文件 > 默认值
 
@@ -105,7 +110,7 @@ deploy [dev] --backup
 }
 ```
 
-### 参数
+## 参数
 
 参数名 | 必填 |说明
 --- | --- |---
@@ -128,7 +133,7 @@ deploy help
 
 获取这些参数信息
 
-### 特殊说明
+## 特殊说明
 
 - 默认只有test/production环境会生成sourcemap。可以在业务项目中的`vue.config.js`配置。
 本项目只有检测到`dist/static/js`文件夹中有`.map`文件才会进行相应操作。
